@@ -21,15 +21,15 @@ public class AwsController {
     @Autowired
     private JobRepository jobRepository;
 
-    @PostMapping("/discover")
+      @PostMapping("/discover")
     public ResponseEntity<Long> discoverServices(@RequestBody List<String> services) {
-        for (String service : services) {
-            Job job = new Job();
-            job.setStatus("IN_PROGRESS");
-            job.setServiceName(service);
-            jobRepository.save(job);
+        Job job = new Job();
+        job.setStatus("IN_PROGRESS");
+        job.setServiceName("DISCOVERY");
+        jobRepository.save(job);
 
-            Long jobId = job.getId();
+        Long jobId = job.getId();
+        for (String service : services) {
             if (service.equals("EC2")) {
                 awsService.discoverEC2Instances(jobId);
             } else if (service.equals("S3")) {
@@ -37,7 +37,7 @@ public class AwsController {
             }
         }
 
-        return ResponseEntity.ok(1L);  
+        return ResponseEntity.ok(jobId);
     }
 
     @GetMapping("/job/{jobId}")
