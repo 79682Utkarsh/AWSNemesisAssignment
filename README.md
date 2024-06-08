@@ -59,7 +59,7 @@ services Ec2 and S3
    --Method:- GET
    --Input:- Service Name S3 or EC2
    --Output:-For S3
-    [
+      [
     {
         "id": 1,
         "bucketName": "nimesaassignmentbucket1"
