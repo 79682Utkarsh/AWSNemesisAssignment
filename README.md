@@ -1,4 +1,4 @@
-Aws Assignment Nemesis
+Aws Assignment Nimesa
 
 ###Spring-boot-based application which will communicate with AWS cloud
 services Ec2 and S3
@@ -13,7 +13,7 @@ services Ec2 and S3
 
 ##Database Schema
 
---Create Database nemesis_assignment_db;
+--Create Database nimesa_assignment_db;
 
 --CREATE TABLE job (
   id BIGINT AUTO_INCREMENT PRIMARY KEY,
@@ -120,7 +120,7 @@ services Ec2 and S3
 ##Database Configuration
 
 spring.application.name=aws-assignment
-spring.datasource.url=jdbc:mysql://localhost:3306/nemesis_assignment_db
+spring.datasource.url=jdbc:mysql://localhost:3306/nimesa_assignment_db
 spring.datasource.username=root
 spring.datasource.password=aabmatica@12345
 spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
