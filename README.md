@@ -7,7 +7,7 @@ services Ec2 and S3
 
 --Java 8
 -- Maven
--- MariaDb
+-- MariaDB
 --Aws account with access to EC2 and S3
 --Postman to test APIs
 
@@ -59,6 +59,7 @@ services Ec2 and S3
    --Method:- GET
    --Input:- Service Name S3 or EC2
    --Output:-For S3
+   
       [
     {
         "id": 1,
