@@ -116,6 +116,19 @@ services Ec2 and S3
 ]
 
 
+##Database Configuration
+
+spring.application.name=aws-assignment
+spring.datasource.url=jdbc:mysql://localhost:3306/nemesis_assignment_db
+spring.datasource.username=root
+spring.datasource.password=aabmatica@12345
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.database-platform=org.hibernate.dialect.MariaDBDialect
+
+
+
 
    
  
